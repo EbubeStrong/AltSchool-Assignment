@@ -291,7 +291,7 @@ form .text-container .label-input {
 @media(max-width: 450px){
    .label-input input,
   .label-input select {
-    padding: 20px 20px 20px 8px;
+    padding: 20px 7px 13px 8px;
     font-size: 2vw;
   }
 

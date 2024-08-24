@@ -290,7 +290,8 @@ form .text-container .label-input {
 
 @media(max-width: 450px){
   form .text-container label {
-    font-size: 13px;
+    font-size: 2.2vw;
+    white-space: nowrap;
   }
   
    .label-input input,

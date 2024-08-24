@@ -287,3 +287,16 @@ form .text-container .label-input {
     margin-bottom: 50px;
   }
 }
+
+@media(max-width: 450px){
+   .label-input input,
+  .label-input select {
+    padding: 20px 20px 20px 8px;
+    font-size: 2vw;
+  }
+
+  .submit-text {
+    font-size: 12px;
+    max-width: 100%;
+  }
+}

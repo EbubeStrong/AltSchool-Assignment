@@ -131,19 +131,6 @@ main::-webkit-scrollbar{
     display: none;
 }
 
-/* main h2 {
-  color: #007acc;
-}
-
-.myId + .myBio {
-  margin-top: 40px;
-}
-
-section ~ section {
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-} */
-
 /* Styling for the first section */
 main section {
   margin-bottom: 20px;

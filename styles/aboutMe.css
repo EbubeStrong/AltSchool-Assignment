@@ -161,7 +161,7 @@ main h2{
     font-family: cursive;
 }
 
-main .idNum{
+/* main .idNum{
     background: linear-gradient(to right, rgb(43, 41, 41), rgb(13, 13, 223));
     background-clip: text;
     color: transparent;
@@ -172,7 +172,7 @@ main  .text-write{
     background-clip: text;
     color: transparent;
 
-}
+} */
 
 main p{
     text-align: justify;

@@ -82,6 +82,7 @@ a {
   left: 0;
   overflow-y: auto;
   background-color: rgba(180, 172, 172, 0.089);
+  display: block;
 }
 
 .logo {

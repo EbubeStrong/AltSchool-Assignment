@@ -75,6 +75,10 @@ a {
   height: 100vh;
 }
 
+.large-screen{
+   display: block;
+}
+
 .logoImageSection {
   padding: 5rem;
   width: 80%;

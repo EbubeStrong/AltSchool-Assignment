@@ -10,7 +10,6 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
-  /* height: 140vh; */
   overflow: auto;
 }
 
@@ -107,22 +106,13 @@ header + main h2 {
   padding-right: 30px;
 }
 
-/* .myId + .myBio {
-  margin-top: 40px;
-}
-
-section ~ section {
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-} */
-
 main {
-  max-width: 800px; /* Set max-width */
-  margin: 0 auto; /* Center the main content */
+  max-width: 800px;
+  margin: 0 auto; 
   padding: 20px;
   background-color: #fff;
   border: 2px solid #333;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   overflow: auto;
   height: 80vh;
 }
@@ -136,7 +126,6 @@ main section {
   margin-bottom: 20px;
   padding: 20px;
   background-color: #f9f9f9;
-  /* border: 1px solid #ddd; */
   border-radius: 6px;
 }
 
@@ -153,26 +142,12 @@ main section + section {
 main section ~ section {
   padding: 25px;
   background-color: #f4f4f4;
-  /* border: 1px solid #ccc; */
   border-radius: 6px;
 }
 
 main h2{
     font-family: cursive;
 }
-
-/* main .idNum{
-    background: linear-gradient(to right, rgb(43, 41, 41), rgb(13, 13, 223));
-    background-clip: text;
-    color: transparent;
-}
-
-main  .text-write{
-    background: linear-gradient(to right, rgb(78, 97, 148), rgb(54, 48, 48));
-    background-clip: text;
-    color: transparent;
-
-} */
 
 main p{
     text-align: justify;

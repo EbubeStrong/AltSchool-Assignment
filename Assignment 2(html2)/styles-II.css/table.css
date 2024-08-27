@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+
+body,
+html {
+  height: 100%;
+  overflow: visible;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: center;
+}
+
+.headerSection nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.headerSection nav a {
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s linear, color 0.2s ease-in;
+  font-size: 25px;
+  color: black;
+}
+
+.headerSection nav a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  background-color: black;
+  height: 3px;
+  transition: 0.3s linear;
+  transform: translateX(0);
+}
+
+.table-main {
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1500px;
+  background-color: rgba(101, 119, 138, 0.096);
+  padding: 40px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.table-heading {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+h1 {
+  /* text-align: center; */
+  color: #4c575c;
+  font-size: 3.3vw;
+  text-transform: capitalize;
+}
+
+h1 span{
+    text-transform: lowercase;
+    color: rgb(113, 171, 189);
+}
+
+table,
+caption,
+thead,
+tbody,
+tr,
+th,
+td {
+  border: 2px solid black;
+  font-size: 2vw;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+caption {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #555;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  font-size: 1em;
+}
+
+th {
+  background-color: rgba(101, 119, 138, 0.603);
+  color: #fff;
+  text-align: center;
+}
+
+.table-head {
+  background-color: #2d3033af;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 650px) {
+  th,
+  td {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .table-main{
+min-height: 100vh;
+  }
+}

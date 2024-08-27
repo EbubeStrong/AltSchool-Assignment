@@ -10,6 +10,17 @@ html {
   overflow: hidden;
 }
 
+:root{
+  --headerSection: rgb(101, 119, 138);
+  --logoImageSection: rgba(180, 172, 172, 0.089);
+  --sign-a: rgb(0, 68, 255);
+  --input-select: rgba(196, 184, 184, 0.103);
+  --blackColor: #000;
+  --whiteColor: #fff;
+  --grayColor: gray;
+  --lightblue: #2980b9;
+}
+
 .logoImageSection::-webkit-scrollbar,
 .formSectionContainer::-webkit-scrollbar,
 .formSection form .text-container::-webkit-scrollbar {
@@ -25,8 +36,7 @@ a {
   top: 0;
   z-index: 1;
   padding: 20px;
-  /* background-color: rgb(51, 153, 255); */
-  background-color: rgb(101, 119, 138);
+  background-color: var(--headerSection);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -35,12 +45,12 @@ a {
   position: relative;
   transition: 0.3s linear, color 0.2s ease-in;
   font-size: 25px;
-  color: black;
+  color: var(--blackColor);
 }
 
 .headerSection nav a span {
   display: none;
-  color: black;
+  color: var(--blackColor);
   transition: 0.3s ease-in-out, transform 0.6s ease-in;
 }
 
@@ -50,14 +60,14 @@ a {
   left: 0;
   bottom: -4px;
   width: 0;
-  background-color: black;
+  background-color: var(--blackColor);
   height: 3px;
   transition: 0.3s linear;
   transform: translateX(7px);
 }
 
 .headerSection nav a:hover {
-  color: white;
+  color: var(--whiteColor);
 }
 
 .headerSection nav a:hover span {
@@ -65,7 +75,6 @@ a {
 }
 
 .headerSection nav a:hover::before {
-  color: blue;
   width: 100%;
 }
 
@@ -81,7 +90,7 @@ a {
   top: 0;
   left: 0;
   overflow-y: auto;
-  background-color: rgba(180, 172, 172, 0.089);
+  background-color: var(--logoImageSection);
   display: block;
 }
 
@@ -119,11 +128,11 @@ a {
 }
 
 .altschoolHeadingText nav a {
-  color: black;
+  color: var(--blackColor);
   text-decoration: none;
 }
 
-/* START OF FORM SECTION */
+/* START OF FORM SECTION STYLES */
 .formSectionContainer {
   width: 100%;
   top: 0;
@@ -142,6 +151,7 @@ a {
 
 .formSectionContainer .sign a {
   text-decoration: none;
+  color: var(--sign-a);
 }
 
 .formSection {
@@ -155,7 +165,7 @@ a {
 .formSection .sign-text {
   margin: 10px 0;
   font-size: 1.5vw;
-  color: gray;
+  color: var(--grayColor);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -163,7 +173,7 @@ a {
   padding: 7px;
   margin-top: 10px;
   display: flex;
-  gap: 5px;
+  gap: 15px;
   width: 100%;
   overflow: auto;
 }
@@ -183,7 +193,7 @@ form .text-container .label-input {
 
 .label-input input,
 .label-input select {
-  background-color: rgba(196, 184, 184, 0.103);
+  background-color: var(--input-select);
   padding: 1vw;
   border: none;
   outline: none;
@@ -196,7 +206,7 @@ form .text-container .label-input {
 
 .label-input input:hover,
 .label-input select:hover {
-  border: 1px solid #2980b9;
+  border: 1px solid var(--lightblue);
   outline: none;
 }
 
@@ -214,7 +224,7 @@ form .text-container .label-input {
   padding: 15px;
   width: 100%;
   max-width: 95%;
-  background-color: #2980b9;
+  background-color: var(--lightblue);
   border: none;
   outline: none;
   font-size: 20px;
@@ -255,6 +265,11 @@ form .text-container .label-input {
 
   .formSectionContainer {
     overflow-y: visible;
+    padding: 0;
+  }
+
+  .formSection {
+    padding: 0 15px;
   }
 
   .formSection .sign-text {
@@ -270,6 +285,8 @@ form .text-container .label-input {
   .label-input select {
     padding: 20px 20px 20px 8px;
     font-size: 15px;
+    width: 100%;
+    min-width: 100%;
   }
 
   .submit-text {
@@ -289,13 +306,19 @@ form .text-container .label-input {
   }
 }
 
-@media(max-width: 450px){
+@media (max-width: 593px) {
+  .formSection form .text-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
   form .text-container label {
     font-size: 10px;
     white-space: nowrap;
   }
-  
-   .label-input input,
+
+  .label-input input,
   .label-input select {
     padding: 20px 7px 13px 8px;
     font-size: 2vw;

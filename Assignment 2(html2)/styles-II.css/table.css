@@ -11,20 +11,29 @@ body {
   background-color: #f4f4f4;
   color: #333;
   text-align: center;
+  position: relative;
 }
 
-body,
-html {
-  height: 100%;
-  overflow: visible;
+:root {
+  --headerSection: rgb(101, 119, 138);
 }
 
 .headerSection {
   display: flex;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 20px;
+  background-color: var(--headerSection);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.headerSection nav {
+.small-screen{
+  display: none;
+}
+
+.large-screen .nav-links {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -38,6 +47,7 @@ html {
   transition: 0.3s linear, color 0.2s ease-in;
   font-size: 25px;
   color: black;
+  text-decoration: none;
 }
 
 .headerSection nav a:before {
@@ -45,11 +55,25 @@ html {
   position: absolute;
   left: 0;
   bottom: -4px;
-  width: 0;
+  width: 0px;
   background-color: black;
   height: 3px;
   transition: 0.3s linear;
   transform: translateX(0);
+}
+
+.headerSection nav a:hover span {
+  display: inline-flex;
+}
+
+.headerSection nav a:hover::before {
+  width: 100%;
+}
+
+.headerSection nav a span {
+  display: none;
+  color: var(--blackColor);
+  transition: 0.3s ease-in-out, transform 0.6s ease-in;
 }
 
 .table-main {
@@ -138,14 +162,25 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+  /* position:absolute; */
+  bottom: 0;
+}
+
+@media(max-width: 769px){
+  .headerSection-2 .hamburger {
+  display: block;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 10%;
+}
 }
 
 @media (max-width: 650px) {
   body,
-html {
-  height: 10%;
-  overflow: visible;
-}
+  html {
+    height: 100%;
+    overflow: visible;
+  }
   th,
   td {
     padding: 10px;
@@ -153,11 +188,16 @@ html {
   }
 
   .table-main {
-    height: 50vh;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-bottom: 0;
   }
 
   .container {
-  width: 100%;
-  max-width: 1500px;
-}
+    width: 100%;
+    max-width: 1500px;
+  }
 }

@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+body{
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 :root{
@@ -242,8 +242,7 @@ form .text-container .label-input {
 }
 
 @media (max-width: 769px) {
-  body,
-  html {
+  body {
     height: 100%;
     overflow: auto;
   }

@@ -29,6 +29,7 @@ html {
   align-items: center;
   justify-content: space-around;
   width: 50%;
+  gap: 40px;
 }
 
 .headerSection nav a {
@@ -86,9 +87,9 @@ h1 {
   text-transform: capitalize;
 }
 
-h1 span{
-    text-transform: lowercase;
-    color: rgb(113, 171, 189);
+h1 span {
+  text-transform: lowercase;
+  color: rgb(113, 171, 189);
 }
 
 table,
@@ -140,13 +141,23 @@ footer {
 }
 
 @media (max-width: 650px) {
+  body,
+html {
+  height: 10%;
+  overflow: visible;
+}
   th,
   td {
     padding: 10px;
     font-size: 0.9em;
   }
 
-  .table-main{
-min-height: 40vh;
+  .table-main {
+    min-height: 2vh;
   }
+
+  .container {
+  width: 100%;
+  max-width: 1500px;
+}
 }

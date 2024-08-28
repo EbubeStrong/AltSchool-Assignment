@@ -137,7 +137,8 @@ section {
 
 .picture-container,
 .audio-container,
-.video-container, .image-container {
+.video-container,
+.image-container {
   display: flex;
   overflow-x: scroll;
   width: 400px;
@@ -152,13 +153,15 @@ section {
 
 .picture-container::-webkit-scrollbar,
 .audio-container::-webkit-scrollbar,
-.video-container::-webkit-scrollbar, .image-container::-webkit-scrollbar {
+.video-container::-webkit-scrollbar,
+.image-container::-webkit-scrollbar {
   display: none;
 }
 
 .picture-content,
 .audio-content,
-.video-content, .image-content {
+.video-content,
+.image-content {
   box-sizing: border-box;
   flex-shrink: 0;
   display: block;
@@ -166,6 +169,7 @@ section {
   scroll-snap-align: center;
   animation: swipeLoop 20s infinite;
   transition: transform 0.5s ease-in-out;
+  border-radius: 15px;
 }
 
 .video-content,
@@ -183,13 +187,15 @@ section {
 
 .picture-content img,
 .audio-content audio,
-.video-content video, .image-content img {
+.video-content video,
+.image-content img {
   width: 400px;
   scroll-snap-align: center;
   transition: transform 0.5s ease-in-out;
 }
 
-.picture-content img, .image-container img {
+.picture-content img,
+.image-container img {
   height: 300px;
   box-shadow: 0 0 15px rgba(26, 26, 27, 0.89);
 }
@@ -261,7 +267,6 @@ iframe {
 .audio-container,
 .video-container {
   overflow-x: auto;
-
 }
 
 /* Manual control of scrollable area */
@@ -335,5 +340,17 @@ footer {
   }
   .media-container {
     max-width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .picture-container,
+  .audio-container,
+  .video-container,
+  .image-container .picture-content img,
+  .audio-content audio,
+  .video-content video,
+  .image-content img {
+    width: 300px;
   }
 }

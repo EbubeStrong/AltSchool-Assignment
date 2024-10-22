@@ -23,6 +23,8 @@
     top: 0;
     right: 0;
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .hamburger-checkbox {
@@ -35,8 +37,10 @@
   }
 
   .hamburger{
+    position: relative;
     display: flex;
     justify-content: flex-end;
+    width: 100%;
   }
 
   .close .nav-links {
@@ -74,7 +78,7 @@
     z-index: 999;
   }
 
-  .hamburger-checkbox:checked ~ .close .nav-links {
+.hamburger-checkbox:checked ~ .close .nav-links {
     display: flex;
     flex-direction: column;
     position: fixed;
